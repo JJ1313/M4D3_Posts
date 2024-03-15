@@ -62,22 +62,22 @@ button {
 
 @keyframes btn-hover {
   0% {
-    border: 1px solid var(--clr-white-60);
+    border-color: var(--clr-white-60);
   }
 
   25% {
-    border: 1px solid red;
+    border-color: red;
   }
 
   50% {
-    border: 1px solid green;
+    border-color: green;
   }
 
   75% {
-    border: 1px solid blue;
+    border-color: blue;
   }
 
   100% {
-    border: 1px solid var(--clr-white-60);
+    border-color: var(--clr-white-60);
   }
 }
