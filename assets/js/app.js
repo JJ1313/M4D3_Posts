@@ -1,9 +1,11 @@
 
 
-const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 const getPosts = async () => {
-  let response = await fetch(API_URL);
+  const API_URL = 'https://jsonplaceholder.typicode.com/posts';
+  const loadingDiv = document.getElementById('loading');
+  loadingDiv.setAttribute('data-visible', 'true');
+  const response = await fetch(API_URL);
   try{
     if(!response.ok){
       console.log('Error al conectar con la API');
@@ -11,6 +13,7 @@ const getPosts = async () => {
       return;
     }
     const data = await response.json(); 
+    loadingDiv.setAttribute('data-visible', 'false');
     displayData(data);
   }
   catch(error){
